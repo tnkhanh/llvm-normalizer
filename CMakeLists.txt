@@ -1,7 +1,7 @@
-#
+####################################################################
 # Author: Ta Quang Trung
 # Date:   July 6th, 2020
-#
+####################################################################
 
 project(llvm-normalizer)
 
@@ -31,7 +31,7 @@ set(
 list(APPEND CMAKE_MODULE_PATH ${CMAKE_DIR})
 
 # Set LLVM version
-set(LLVM_VERSION 11)
+set(LLVM_VERSION 11.1)
 message (STATUS "Looking for LLVM ${LLVM_VERSION}")
 
 # Set LLVM preferred path
