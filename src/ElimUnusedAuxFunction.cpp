@@ -1,3 +1,8 @@
+/*******************************************************************
+ * Author: Ta Quang Trung
+ * Date:   July 6th, 2020
+ *******************************************************************/
+
 #include "ElimUnusedAuxFunction.h"
 
 using namespace discover;
