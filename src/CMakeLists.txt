@@ -1,3 +1,11 @@
+####################################################################
+# Author: Ta Quang Trung
+# Date:   July 6th, 2020
+#
+# Copyright (c) 2020-2021 Singapore Blockchain Innovation Programme.
+# All rights reserved.
+####################################################################
+
 set(SOURCE_FILES
   Common.cpp
   Debug.cpp
