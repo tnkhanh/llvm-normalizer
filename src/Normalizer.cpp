@@ -39,6 +39,7 @@
 #include "ElimIdenticalInstrs.h"
 #include "CombineGEP.h"
 #include "ElimAllocaStoreArg.h"
+#include "ElimInlineAsm.h"
 
 using namespace std;
 using namespace llvm;
@@ -213,6 +214,7 @@ int main(int argc, char** argv) {
     addModulePass(ModulePasses, new ElimUnusedAuxFunction());
     addModulePass(ModulePasses, new InlineSimpleFunction());
     addModulePass(ModulePasses, new ElimUnusedGlobal());
+    addModulePass(ModulePasses, new ElimInlineAsm());
 
     // Add function passes
     addFunctionPass(*FuncPasses, new ElimAllocaStoreArg());
