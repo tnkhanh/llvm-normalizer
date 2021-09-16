@@ -17,7 +17,8 @@ set(SOURCE_FILES
   ElimAllocaStoreArg.cpp
   CombineGEP.cpp
   InitGlobal.cpp
-  UninlineInstruction.cpp)
+  UninlineInstruction.cpp
+  ElimInlineAsm.cpp)
 
 # Relevant LLVM Components can be found by: llvm-config --components
 llvm_map_components_to_libnames(LLVM_LIBS
