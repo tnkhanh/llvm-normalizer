@@ -15,20 +15,18 @@ bool ElimInlineAsm::runOnModule(Module &M) {
 
   if (checksumPos != string::npos) {
     int nextLinePos = inlineAsm.find('\n', checksumPos + 1);
-    string expectedLastLineToDelete = "\n\t.text\n";
+    const string expectedLastLineToDelete = "\n\t.text\n";
     if (nextLinePos != string::npos &&
         inlineAsm.substr(nextLinePos, 8) == expectedLastLineToDelete) {
         M.setModuleInlineAsm(inlineAsm.substr(nextLinePos + 8));
 
         debug() << "Final module-level inline asm: __" << M.getModuleInlineAsm() << "__\n";
     }
-    else {
+    else
       debug() << "Module-level inline asm is unchanged\n";
-    }
   }
-  else {
+  else
     debug() << "Module-level inline asm is unchanged\n";
-  }
 
   debug() << "Finish Module Pass: " << passName << "\n";
 
