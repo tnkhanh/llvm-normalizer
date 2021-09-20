@@ -72,7 +72,19 @@ llvm-normalizer
   ...)
   ```
 
-- Make sure the binary `clang` version 11.1 appears in your system's $PATH.
+- Make sure the default command `clang` in your system refers Clang version 11.
+
+  + For Ubuntu-based system, if there are multiple installed versions of Clang,
+    then use `update-alternatives` to set Clang 11 by default. For example:
+
+    ```sh
+    # First time use update-alternatives to set up clang 11:
+    sudo update-alternatives --install /usr/bin/clang clang /usr/bin/clang-11 90
+    sudo update-alternatives --install /usr/bin/clang++ clang++ /usr/bin/clang++-11 90
+
+    # If Clang 11 was set up before, then update it by:
+    sudo update-alternatives --set clang /usr/bin/clang-11
+    ```
 
 - Compile `llvm-normalizer`
 
