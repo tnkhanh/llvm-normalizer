@@ -1,3 +1,10 @@
+/********************************************************************
+ * This file is part of the tool Normalizer of the project Discover.
+ *
+ * Copyright (c) 2020-2021 Singapore Blockchain Innovation Programme.
+ * All rights reserved.
+ *******************************************************************/
+
 #include <iostream>
 
 #include "llvm/IR/Type.h"
